@@ -9,16 +9,27 @@ IPython 8.15.0 -- An enhanced Interactive Python.
 12 Projet ML
 """
 import pandas as pd
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
+
 from sklearn.model_selection import train_test_split
+
 from sklearn.preprocessing import StandardScaler
+
 from sklearn.pipeline import Pipeline
+
 from sklearn.metrics import accuracy_score, classification_report
+
 from xgboost import XGBClassifier
+
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.svm import SVC
+
 from sklearn.neural_network import MLPClassifier
 
 
@@ -33,53 +44,83 @@ numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 
                     'DiabetesPedigreeFunction', 'Age']
 
 plt.figure(figsize=(15, 10))
+
 for i, feature in enumerate(numeric_features, 1):
+
     plt.subplot(3, 3, i)
     plt.hist(data[feature], bins=30, edgecolor='black')
     plt.title(f'Distribution of {feature}')
 plt.tight_layout()
+
 plt.show()
+
 ![Figure_1](https://github.com/user-attachments/assets/fad3458e-0edc-455b-bb4c-c8bdc4537f80)
 
 # Diagramme en barres pour la répartition des classes
+
 plt.figure(figsize=(6, 4))
+
 data['Outcome'].value_counts().plot(kind='bar', color=['lightblue', 'lightgreen'])
+
 plt.title('Répartition des Classes (Outcome)')
+
 plt.xlabel('Outcome')
+
 plt.ylabel('Compte')
+
 plt.xticks(rotation=0)
+
 plt.show
+
 (![Figure_2](https://github.com/user-attachments/assets/6f7129c4-c7ce-416f-96a4-d5c85c2cd380)
 
 # Matrice de corrélation
+
 plt.figure(figsize=(10, 8))
+
 correlation_matrix = data.corr()
+
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+
 plt.title('Matrice de Corrélation')
+
 plt.show()
+
 ![Figure_3](https://github.com/user-attachments/assets/d519d89d-2761-4dfb-8ac8-4f0404d9c169)
 
 # Nuage de points entre deux caractéristiques
+
 plt.figure(figsize=(8, 6))
+
 for outcome in [0, 1]:
+
     subset = data[data['Outcome'] == outcome]
     plt.scatter(subset['Glucose'], subset['BMI'], label=f'Outcome {outcome}')
 plt.title('Glucose vs BMI par Outcome')
+
 plt.xlabel('Glucose')
+
 plt.ylabel('BMI')
+
 plt.legend()
+
 plt.show()
+
 ![Figure_4](https://github.com/user-attachments/assets/74ab77ca-b2bc-49e2-b22e-a773f93747bc)
 
 # Prétraitement des données
+
 X = data[numeric_features]
+
 y = data[target]
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 preprocessor = Pipeline(steps=[('scaler', StandardScaler())])
 
 # Pipelines
+
 models = {
     'Logistic Regression': Pipeline([
         ('preprocessor', preprocessor),
@@ -104,6 +145,7 @@ models = {
 }
 
 # Entrainement
+
 for name, model in models.items():
     model.fit(X_train, y_train)
     
