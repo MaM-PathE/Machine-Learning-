@@ -51,7 +51,6 @@ for i, feature in enumerate(numeric_features, 1):
 plt.tight_layout()
 plt.show()
 
-![Figure_1](https://github.com/user-attachments/assets/946abb08-35fa-4a49-9cda-be9f88452bd3)
 
 # Diagramme en barres pour la répartition des classes
 plt.figure(figsize=(6, 4))
@@ -72,7 +71,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 plt.title('Matrice de Corrélation')
 plt.show()
 
-![Figure_3](https://github.com/user-attachments/assets/8101117b-4606-4e29-82df-19db36b92b56)
+![Figure_2](https://github.com/user-attachments/assets/8101117b-4606-4e29-82df-19db36b92b56)
 
 
 # Nuage de points entre deux caractéristiques
@@ -86,7 +85,7 @@ plt.ylabel('BMI')
 plt.legend()
 plt.show()
 
-![Figure_4](https://github.com/user-attachments/assets/e3f16072-1b85-4fcc-8dbe-462aa27b9bb6)
+![Figure_3](https://github.com/user-attachments/assets/e3f16072-1b85-4fcc-8dbe-462aa27b9bb6)
 
 # Prétraitement des données
 X = data[numeric_features]
