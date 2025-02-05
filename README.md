@@ -56,6 +56,7 @@ IPython 8.15.0 -- An enhanced Interactive Python.
 
 ![Figure_1](https://github.com/user-attachments/assets/fad3458e-0edc-455b-bb4c-c8bdc4537f80)
 
+
 L'analyse des distributions des caractéristiques liées au diabète révèle plusieurs tendances significatives. Les données sur les grossesses montrent que la majorité des femmes ont eu entre 0 et 5 grossesses, avec très peu de cas dépassant 10 grossesses. Le taux de glucose suit une distribution normale centrée entre 100-150 mg/dL, tandis que la pression artérielle présente également une distribution normale avec un pic entre 70-80 mmHg, bien que quelques valeurs anormalement basses suggèrent de possibles erreurs de mesure. L'épaisseur cutanée et l'insuline présentent des distributions problématiques avec un nombre important de valeurs à 0, indiquant probablement des données manquantes. L'IMC suit une distribution normale centrée autour de 30-35, ce qui indique une prévalence du surpoids dans l'échantillon. La fonction pédigrée du diabète montre une distribution asymétrique avec la majorité des valeurs entre 0 et 1, et l'âge des patients est principalement concentré entre 20 et 40 ans, avec une diminution progressive après 50 ans. Ces observations soulignent l'importance d'un prétraitement approprié des données, particulièrement pour les variables présentant des valeurs manquantes, avant de procéder à la modélisation prédictive du diabète.
 
 # Diagramme en barres pour la répartition des classes
@@ -76,6 +77,7 @@ L'analyse des distributions des caractéristiques liées au diabète révèle pl
 
 (![Figure_2](https://github.com/user-attachments/assets/6f7129c4-c7ce-416f-96a4-d5c85c2cd380)
 
+
 Le nuage de points comparant le taux de glucose et l'IMC révèle une distinction intéressante entre les patients diabétiques (Outcome 1) et non diabétiques (Outcome 0). On observe une concentration plus élevée de cas diabétiques (points orange) dans la zone de glucose supérieure à 125 mg/dL, ce qui correspond au seuil clinique du diabète. La répartition de l'IMC est relativement similaire entre les deux groupes, majoritairement entre 20 et 45, mais les cas diabétiques semblent légèrement plus présents dans les IMC élevés. Quelques valeurs aberrantes sont visibles, notamment des IMC à 0 qui sont probablement des erreurs de données.
 
 # Matrice de corrélation
@@ -91,6 +93,7 @@ Le nuage de points comparant le taux de glucose et l'IMC révèle une distinctio
       plt.show()
 
 ![Figure_3](https://github.com/user-attachments/assets/d519d89d-2761-4dfb-8ac8-4f0404d9c169)
+
 
 Le diagramme en barres montre clairement un déséquilibre dans la distribution des classes. La classe 0 (non diabétiques) compte environ 500 cas, tandis que la classe 1 (diabétiques) n'en compte qu'environ 270. Ce ratio approximatif de 65%-35% indique un déséquilibre de classes qui pourrait affecter la performance des modèles de prédiction. Cette disparité explique potentiellement pourquoi les modèles ont généralement une meilleure performance sur la classe majoritaire (non diabétiques).
 # Nuage de points entre deux caractéristiques
@@ -108,7 +111,7 @@ Le diagramme en barres montre clairement un déséquilibre dans la distribution 
 
       plt.legend()
 
-p      lt.show()
+      plt.show()
 
 ![Figure_4](https://github.com/user-attachments/assets/74ab77ca-b2bc-49e2-b22e-a773f93747bc)
 
