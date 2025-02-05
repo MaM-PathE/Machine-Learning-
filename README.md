@@ -169,7 +169,7 @@ La matrice de corrélation révèle plusieurs relations importantes entre les va
 
 --- Logistic Regression ---
 
-Accuracy: 0.7532467532467533
+      Accuracy: 0.7532467532467533
 
               precision    recall  f1-score   support
            0       0.81      0.80      0.81        99
@@ -182,7 +182,7 @@ Accuracy: 0.7532467532467533
 
 --- Random Forest ---
 
-Accuracy: 0.7207792207792207
+      Accuracy: 0.7207792207792207
 
               precision    recall  f1-score   support
            0       0.79      0.78      0.78        99
@@ -195,7 +195,7 @@ Accuracy: 0.7207792207792207
 
 --- Support Vector Machine ---
 
-Accuracy: 0.7337662337662337
+      Accuracy: 0.7337662337662337
 
               precision    recall  f1-score   support
 
@@ -209,7 +209,7 @@ Accuracy: 0.7337662337662337
 
 --- Neural Network ---
 
-Accuracy: 0.7077922077922078
+      Accuracy: 0.7077922077922078
 
               precision    recall  f1-score   support
            0       0.78      0.76      0.77        99
@@ -222,7 +222,7 @@ Accuracy: 0.7077922077922078
 
 --- XGBoost ---
 
-Accuracy: 0.7077922077922078
+      Accuracy: 0.7077922077922078
 
               precision    recall  f1-score   support
            0       0.79      0.74      0.76        99
