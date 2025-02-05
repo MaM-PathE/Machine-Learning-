@@ -8,50 +8,50 @@ IPython 8.15.0 -- An enhanced Interactive Python.
 @author: cheikh 
 12 Projet ML
 """
-import pandas as pd
+      import pandas as pd
 
-import matplotlib.pyplot as plt
+      import matplotlib.pyplot as plt
 
-import seaborn as sns
+      import seaborn as sns
 
-from sklearn.model_selection import train_test_split
+      from sklearn.model_selection import train_test_split
 
-from sklearn.preprocessing import StandardScaler
+      from sklearn.preprocessing import StandardScaler
 
-from sklearn.pipeline import Pipeline
+      from sklearn.pipeline import Pipeline
 
-from sklearn.metrics import accuracy_score, classification_report
+      from sklearn.metrics import accuracy_score, classification_report
 
-from xgboost import XGBClassifier
+      from xgboost import XGBClassifier
 
-from sklearn.linear_model import LogisticRegression
+      from sklearn.linear_model import LogisticRegression
 
-from sklearn.ensemble import RandomForestClassifier
+      from sklearn.ensemble import RandomForestClassifier
 
-from sklearn.svm import SVC
+      from sklearn.svm import SVC
 
-from sklearn.neural_network import MLPClassifier
+      from sklearn.neural_network import MLPClassifier
 
 
-data = pd.read_excel(r'C:\Users\cheik\Downloads\ML Health.xlsx', sheet_name='ML Health')
+    data = pd.read_excel(r'C:\Users\cheik\Downloads\ML Health.xlsx', sheet_name='ML Health')
 
-numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 
+    numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 
                     'DiabetesPedigreeFunction', 'Age']
-target = 'Outcome'
+    target = 'Outcome'
 
 
-numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 
+    numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 
                     'DiabetesPedigreeFunction', 'Age']
 
-plt.figure(figsize=(15, 10))
+    plt.figure(figsize=(15, 10))
 
-for i, feature in enumerate(numeric_features, 1):
+    for i, feature in enumerate(numeric_features, 1):
     plt.subplot(3, 3, i)
     plt.hist(data[feature], bins=30, edgecolor='black')
     plt.title(f'Distribution of {feature}')
-plt.tight_layout()
+    plt.tight_layout()
 
-plt.show()
+    plt.show()
 
 ![Figure_1](https://github.com/user-attachments/assets/fad3458e-0edc-455b-bb4c-c8bdc4537f80)
 
