@@ -46,7 +46,6 @@ numeric_features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 
 plt.figure(figsize=(15, 10))
 
 for i, feature in enumerate(numeric_features, 1):
-
     plt.subplot(3, 3, i)
     plt.hist(data[feature], bins=30, edgecolor='black')
     plt.title(f'Distribution of {feature}')
@@ -93,7 +92,6 @@ plt.show()
 plt.figure(figsize=(8, 6))
 
 for outcome in [0, 1]:
-
     subset = data[data['Outcome'] == outcome]
     plt.scatter(subset['Glucose'], subset['BMI'], label=f'Outcome {outcome}')
 plt.title('Glucose vs BMI par Outcome')
@@ -147,19 +145,20 @@ models = {
 # Entrainement
 
 for name, model in models.items():
-    model.fit(X_train, y_train)
+    model.fit(X_train, y_train)    
+   # Prédiction
+   y_pred = model.predict(X_test)
     
-    # Prédiction
-    y_pred = model.predict(X_test)
-    
-    # Évaluation
-    print(f"--- {name} ---")
+   # Évaluation
+  print(f"--- {name} ---")
     print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
     print(classification_report(y_test, y_pred))
     print("\n")
 
 --- Logistic Regression ---
+
 Accuracy: 0.7532467532467533
+
               precision    recall  f1-score   support
 
            0       0.81      0.80      0.81        99
@@ -172,7 +171,9 @@ weighted avg       0.76      0.75      0.75       154
 
 
 --- Random Forest ---
+
 Accuracy: 0.7207792207792207
+
               precision    recall  f1-score   support
 
            0       0.79      0.78      0.78        99
@@ -185,7 +186,9 @@ weighted avg       0.72      0.72      0.72       154
 
 
 --- Support Vector Machine ---
+
 Accuracy: 0.7337662337662337
+
               precision    recall  f1-score   support
 
            0       0.77      0.83      0.80        99
@@ -198,7 +201,9 @@ weighted avg       0.73      0.73      0.73       154
 
 
 --- Neural Network ---
+
 Accuracy: 0.7077922077922078
+
               precision    recall  f1-score   support
 
            0       0.78      0.76      0.77        99
@@ -211,7 +216,9 @@ weighted avg       0.71      0.71      0.71       154
 
 
 --- XGBoost ---
+
 Accuracy: 0.7077922077922078
+
               precision    recall  f1-score   support
 
            0       0.79      0.74      0.76        99
