@@ -182,8 +182,8 @@ Accuracy: 0.7207792207792207
            0       0.79      0.78      0.78        99
            1       0.61      0.62      0.61        55     
     accuracy                           0.72       154
-   macro avg       0.70      0.70      0.70       154
-weighted avg       0.72      0.72      0.72       154
+                                                          macro avg       0.70      0.70      0.70       154
+                                                       weighted avg       0.72      0.72      0.72       154
 
 
 
@@ -196,8 +196,8 @@ Accuracy: 0.7337662337662337
            0       0.77      0.83      0.80        99
            1       0.65      0.56      0.60        55
     accuracy                           0.73       154
-   macro avg       0.71      0.70      0.70       154
-weighted avg       0.73      0.73      0.73       154
+                                                         macro avg       0.71      0.70      0.70       154
+                                                      weighted avg       0.73      0.73      0.73       154
 
 
 
@@ -209,8 +209,8 @@ Accuracy: 0.7077922077922078
            0       0.78      0.76      0.77        99
            1       0.59      0.62      0.60        55      
     accuracy                           0.71       154
-   macro avg       0.68      0.69      0.69       154
-weighted avg       0.71      0.71      0.71       154
+                                                         macro avg       0.68      0.69      0.69       154
+                                                      weighted avg       0.71      0.71      0.71       154
 
 
 
@@ -222,8 +222,8 @@ Accuracy: 0.7077922077922078
            0       0.79      0.74      0.76        99
            1       0.58      0.65      0.62        55
     accuracy                           0.71       154
-   macro avg       0.69      0.70      0.69       154
-weighted avg       0.72      0.71      0.71       154
+                                                       macro avg       0.69      0.70      0.69       154
+                                                    weighted avg       0.72      0.71      0.71       154
 
 
 Dans cette analyse de modèles de machine learning pour prédire le diabète, la régression logistique se distingue avec la meilleure performance globale, atteignant 75,32% de précision dans la détection des cas de diabète. Les modèles montrent une capacité à différencier les patients diabétiques et non diabétiques, mais avec des variations de performance. La classe 0 (patients sans diabète) est systématiquement mieux prédite que la classe 1 (patients diabétiques), ce qui pourrait indiquer des difficultés à identifier précisément les cas de diabète.
