@@ -112,16 +112,16 @@ plt.show()
 ![Figure_4](https://github.com/user-attachments/assets/74ab77ca-b2bc-49e2-b22e-a773f93747bc)
 
 La matrice de corrélation révèle plusieurs relations importantes entre les variables. Le glucose montre la plus forte corrélation positive avec l'outcome (0.47), ce qui en fait le meilleur prédicteur individuel du diabète. L'âge et le nombre de grossesses sont fortement corrélés entre eux (0.54), suggérant une relation naturelle entre ces variables. L'IMC présente une corrélation modérée avec l'outcome (0.29), tandis que l'épaisseur cutanée et l'insuline montrent une corrélation significative entre elles (0.44). La pression artérielle et la fonction pédigrée du diabète montrent des corrélations relativement faibles avec les autres variables, ce qui suggère qu'elles pourraient apporter des informations complémentaires uniques au modèle.
+
 # Prétraitement des données
+    X = data[numeric_features]
+    
+    y = data[target]
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    preprocessor = Pipeline(steps=[('scaler', StandardScaler())])
 
-X = data[numeric_features]
-
-y = data[target]
-
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-preprocessor = Pipeline(steps=[('scaler', StandardScaler())])
 
 # Pipelines
 
@@ -150,13 +150,13 @@ models = {
 
 # Entrainement
 
-for name, model in models.items():
+    for name, model in models.items():
     model.fit(X_train, y_train)    
-   # Prédiction
-   y_pred = model.predict(X_test)
+     # Prédiction
+     y_pred = model.predict(X_test)
     
-   # Évaluation
-  print(f"--- {name} ---")
+     # Évaluation
+    print(f"--- {name} ---")
     print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
     print(classification_report(y_test, y_pred))
     print("\n")
