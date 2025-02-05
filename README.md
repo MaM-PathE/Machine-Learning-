@@ -134,8 +134,8 @@ for name, model in models.items():
     print("\n")
 
 --- Logistic Regression ---
-
 Accuracy: 0.7532467532467533
+         
               precision    recall  f1-score   support
            0       0.81      0.80      0.81        99
            1       0.65      0.67      0.66        55
@@ -148,6 +148,7 @@ weighted avg       0.76      0.75      0.75       154
 --- Random Forest ---
 
 Accuracy: 0.7207792207792207 
+       
               precision    recall  f1-score   support
            0       0.79      0.78      0.78        99
            1       0.61      0.62      0.61        55
@@ -160,6 +161,7 @@ weighted avg       0.72      0.72      0.72       154
 --- Support Vector Machine ---
 
 Accuracy: 0.7337662337662337  
+       
               precision    recall  f1-score   support
            0       0.77      0.83      0.80        99
            1       0.65      0.56      0.60        55
@@ -172,6 +174,7 @@ weighted avg       0.73      0.73      0.73       154
 --- Neural Network ---
 
 Accuracy: 0.7077922077922078
+        
               precision    recall  f1-score   support
            0       0.78      0.76      0.77        99
            1       0.59      0.62      0.60        55
@@ -184,6 +187,7 @@ weighted avg       0.71      0.71      0.71       154
 --- XGBoost ---
 
 Accuracy: 0.7077922077922078     
+         
               precision    recall  f1-score   support
            0       0.79      0.74      0.76        99
            1       0.58      0.65      0.62        55
