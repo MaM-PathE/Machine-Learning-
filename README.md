@@ -8,8 +8,9 @@ IPython 8.15.0 -- An enhanced Interactive Python.
 @author: cheikh 
 12 Projet ML
 """
-      import pandas as pd
 
+      import pandas as pd
+      
       import matplotlib.pyplot as plt
 
       import seaborn as sns
@@ -59,19 +60,19 @@ L'analyse des distributions des caractéristiques liées au diabète révèle pl
 
 # Diagramme en barres pour la répartition des classes
 
-plt.figure(figsize=(6, 4))
+      plt.figure(figsize=(6, 4))
 
-data['Outcome'].value_counts().plot(kind='bar', color=['lightblue', 'lightgreen'])
+      data['Outcome'].value_counts().plot(kind='bar', color=['lightblue', 'lightgreen'])
 
-plt.title('Répartition des Classes (Outcome)')
+      plt.title('Répartition des Classes (Outcome)')
 
-plt.xlabel('Outcome')
+      plt.xlabel('Outcome')
 
-plt.ylabel('Compte')
+      plt.ylabel('Compte')
 
-plt.xticks(rotation=0)
+      plt.xticks(rotation=0)
 
-plt.show
+      plt.show
 
 (![Figure_2](https://github.com/user-attachments/assets/6f7129c4-c7ce-416f-96a4-d5c85c2cd380)
 
@@ -79,35 +80,35 @@ Le nuage de points comparant le taux de glucose et l'IMC révèle une distinctio
 
 # Matrice de corrélation
 
-plt.figure(figsize=(10, 8))
+      plt.figure(figsize=(10, 8))
 
-correlation_matrix = data.corr()
+      correlation_matrix = data.corr()
 
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+      sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 
-plt.title('Matrice de Corrélation')
+      plt.title('Matrice de Corrélation')
 
-plt.show()
+      plt.show()
 
 ![Figure_3](https://github.com/user-attachments/assets/d519d89d-2761-4dfb-8ac8-4f0404d9c169)
 
 Le diagramme en barres montre clairement un déséquilibre dans la distribution des classes. La classe 0 (non diabétiques) compte environ 500 cas, tandis que la classe 1 (diabétiques) n'en compte qu'environ 270. Ce ratio approximatif de 65%-35% indique un déséquilibre de classes qui pourrait affecter la performance des modèles de prédiction. Cette disparité explique potentiellement pourquoi les modèles ont généralement une meilleure performance sur la classe majoritaire (non diabétiques).
 # Nuage de points entre deux caractéristiques
 
-plt.figure(figsize=(8, 6))
+      plt.figure(figsize=(8, 6))
 
-for outcome in [0, 1]:
+      for outcome in [0, 1]:
     subset = data[data['Outcome'] == outcome]
     plt.scatter(subset['Glucose'], subset['BMI'], label=f'Outcome {outcome}')
-plt.title('Glucose vs BMI par Outcome')
+      plt.title('Glucose vs BMI par Outcome')
 
-plt.xlabel('Glucose')
+      plt.xlabel('Glucose')
 
-plt.ylabel('BMI')
+      plt.ylabel('BMI')
 
-plt.legend()
+      plt.legend()
 
-plt.show()
+p      lt.show()
 
 ![Figure_4](https://github.com/user-attachments/assets/74ab77ca-b2bc-49e2-b22e-a773f93747bc)
 
