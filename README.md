@@ -159,7 +159,6 @@ weighted avg       0.72      0.72      0.72       154
 
 
 --- Support Vector Machine ---
-
 Accuracy: 0.7337662337662337  
        
               precision    recall  f1-score   support
@@ -172,9 +171,8 @@ weighted avg       0.73      0.73      0.73       154
 
 
 --- Neural Network ---
-
 Accuracy: 0.7077922077922078
-        
+
               precision    recall  f1-score   support
            0       0.78      0.76      0.77        99
            1       0.59      0.62      0.60        55
@@ -185,7 +183,6 @@ weighted avg       0.71      0.71      0.71       154
 
 
 --- XGBoost ---
-
 Accuracy: 0.7077922077922078     
          
               precision    recall  f1-score   support
