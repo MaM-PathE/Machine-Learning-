@@ -126,11 +126,13 @@ La matrice de corrélation révèle plusieurs relations importantes entre les va
 
 # Pipelines
 
-models = {
+
+      models = {
     'Logistic Regression': Pipeline([
         ('preprocessor', preprocessor),
         ('classifier', LogisticRegression(random_state=42))
     ]),
+    
     'Random Forest': Pipeline([
         ('preprocessor', preprocessor),
         ('classifier', RandomForestClassifier(n_estimators=100, random_state=42))
@@ -147,7 +149,7 @@ models = {
         ('preprocessor', preprocessor),
         ('classifier', XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42))
     ])
-}
+      }
 
 # Entrainement
 
