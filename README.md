@@ -9,16 +9,27 @@ IPython 8.15.0 -- An enhanced Interactive Python.
 12 Projet ML
 """
 import pandas as pd
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
+
 from sklearn.model_selection import train_test_split
+
 from sklearn.preprocessing import StandardScaler
+
 from sklearn.pipeline import Pipeline
+
 from sklearn.metrics import accuracy_score, classification_report
+
 from xgboost import XGBClassifier
+
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.svm import SVC
+
 from sklearn.neural_network import MLPClassifier
 
 
@@ -48,7 +59,6 @@ plt.title('Répartition des Classes (Outcome)')
 plt.xlabel('Outcome')
 plt.ylabel('Compte')
 plt.xticks(rotation=0)
-
 plt.show()
 
 ![Figure_1](https://github.com/user-attachments/assets/b15928be-5f66-455a-b3d2-8d09bdc2eb17)
@@ -60,6 +70,7 @@ correlation_matrix = data.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 plt.title('Matrice de Corrélation')
 plt.show()
+
 ![Figure_3](https://github.com/user-attachments/assets/8101117b-4606-4e29-82df-19db36b92b56)
 
 
@@ -122,12 +133,12 @@ for name, model in models.items():
     print("\n")
 
 --- Logistic Regression ---
+
 Accuracy: 0.7532467532467533
               precision    recall  f1-score   support
 
            0       0.81      0.80      0.81        99
            1       0.65      0.67      0.66        55
-
     accuracy                           0.75       154
    macro avg       0.73      0.74      0.73       154
 weighted avg       0.76      0.75      0.75       154
@@ -140,7 +151,6 @@ Accuracy: 0.7207792207792207
 
            0       0.79      0.78      0.78        99
            1       0.61      0.62      0.61        55
-
     accuracy                           0.72       154
    macro avg       0.70      0.70      0.70       154
 weighted avg       0.72      0.72      0.72       154
@@ -153,7 +163,6 @@ Accuracy: 0.7337662337662337
 
            0       0.77      0.83      0.80        99
            1       0.65      0.56      0.60        55
-
     accuracy                           0.73       154
    macro avg       0.71      0.70      0.70       154
 weighted avg       0.73      0.73      0.73       154
@@ -166,7 +175,6 @@ Accuracy: 0.7077922077922078
 
            0       0.78      0.76      0.77        99
            1       0.59      0.62      0.60        55
-
     accuracy                           0.71       154
    macro avg       0.68      0.69      0.69       154
 weighted avg       0.71      0.71      0.71       154
@@ -179,7 +187,6 @@ Accuracy: 0.7077922077922078
 
            0       0.79      0.74      0.76        99
            1       0.58      0.65      0.62        55
-
     accuracy                           0.71       154
    macro avg       0.69      0.70      0.69       154
 weighted avg       0.72      0.71      0.71       154
