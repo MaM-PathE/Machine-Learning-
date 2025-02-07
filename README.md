@@ -1,68 +1,87 @@
-# 🩺 Projet de Prédiction du Diabète par Apprentissage Automatique
+# 🩺 Projets de Prédiction de Santé et Assurance Voyage
 
-## 🎯 Objectif du Projet
-Développer un modèle prédictif capable de détecter précocement le risque de diabète en utilisant des techniques d'apprentissage automatique avancées. L'objectif principal est de créer un outil d'aide au diagnostic qui puisse analyser différents indicateurs de santé et prédire la probabilité de développer un diabète.
+## 🎯 Objectifs des Projets
 
-## 📊 Jeu de Données
-### Source
-Fichier Excel : ML Health
+### Prédiction du Diabète
+Développer un modèle prédictif capable de détecter précocement le risque de diabète en analysant différents indicateurs de santé.
 
-### Caractéristiques
-- **Caractéristiques Numériques**:
-  * Grossesses
-  * Niveau de Glucose
-  * Tension Artérielle
-  * Épaisseur de la Peau
-  * Insuline
-  * IMC
-  * Fonction de Pedigree Diabétique
-  * Âge
+### Prédiction d'Assurance Voyage
+Créer un modèle capable de prédire la probabilité qu'un client souscrive une assurance voyage en analysant des caractéristiques démographiques et personnelles.
 
-### Variable Cible
-- **Résultat**: Classification binaire (Diabète : Oui/Non)
+## 📊 Jeux de Données
+
+### Prédiction du Diabète
+**Caractéristiques Numériques**:
+- Grossesses
+- Niveau de Glucose
+- Tension Artérielle
+- Épaisseur de la Peau
+- Insuline
+- IMC
+- Fonction de Pedigree Diabétique
+- Âge
+
+**Variable Cible**: Diabète (Oui/Non)
+
+### Prédiction d'Assurance Voyage
+**Variables Catégorielles**:
+- Type d'Emploi
+- Diplômé ou Non
+- Voyageur Fréquent
+- Déjà Voyagé à l'Étranger
+
+**Variables Numériques**:
+- Âge
+- Revenu Annuel
+- Membres de la Famille
+- Maladies Chroniques
+
+**Variable Cible**: Souscription Assurance Voyage (Oui/Non)
 
 ## 🤖 Modèles d'Apprentissage Automatique
-Nous avons implémenté et comparé cinq algorithmes de classification :
+
+Implémentation de cinq algorithmes de classification pour chaque projet :
 
 1. **Régression Logistique**
-   - Modèle linéaire simple et interprétable
-   - Entraînement et prédiction rapides
-   
+   - Modèle linéaire simple
+   - Interprétabilité élevée
+
 2. **Forêt Aléatoire**
-   - Méthode d'ensemble avec plusieurs arbres de décision
-   - Gère les relations non linéaires
-   - Moins sujet au surapprentissage
+   - Ensemble de plusieurs arbres
+   - Capture des interactions complexes
 
 3. **Machine à Vecteurs de Support (SVM)**
-   - Efficace dans les espaces de haute dimension
-   - Performant avec une marge de séparation claire
+   - Performant pour la séparation de classes
+   - Efficace en haute dimension
 
-4. **Réseau de Neurones (Perceptron Multi-Couches)**
-   - Capture des relations non linéaires complexes
+4. **Réseau de Neurones**
+   - Modélisation de relations non linéaires
    - Architecture flexible
 
 5. **XGBoost**
-   - Algorithme avancé de gradient boosting
-   - Haute performance et évolutivité
-   - Gère efficacement les interactions entre caractéristiques
+   - Algorithme de gradient boosting avancé
+   - Haute performance prédictive
 
-## 📈 Métriques d'Évaluation des Modèles
-- **Précision**: Performance globale du modèle
-- **Précision (Precision)**: Proportion de prédictions positives vraies
-- **Rappel (Recall)**: Proportion de positifs réels correctement identifiés
-- **Score F1**: Moyenne harmonique de la précision et du rappel
+## 📈 Métriques d'Évaluation
+- Précision globale
+- Précision (Precision)
+- Rappel (Recall)
+- Score F1
+- Rapport de classification détaillé
 
 ## 🔬 Méthodologie
 - Prétraitement des données
-- Standardisation des caractéristiques
-- Division du jeu de données en ensembles d'entraînement et de test
-- Entraînement et évaluation de plusieurs modèles
+- Encodage des variables catégorielles
+- Standardisation des variables numériques
+- Séparation des données en ensembles d'entraînement/test
+- Entraînement et évaluation multi-modèles
 - Comparaison des performances
 
 ## 🌟 Points Clés
-- Détection précoce du risque de diabète
-- Utilisation de multiples algorithmes de machine learning
-- Approche comparative pour identifier le meilleur modèle prédictif
+- Détection précoce de risques de santé
+- Prédiction de comportements de consommation
+- Utilisation de techniques d'apprentissage automatique avancées
+- Approche comparative pour optimisation
 
 ## 🤝 Contributions
 1. Forker le dépôt
